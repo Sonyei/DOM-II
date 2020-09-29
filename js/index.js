@@ -1,20 +1,27 @@
 // Your code goes here
-const firstLink = document.querySelector(".nav-link")
-console.log(firstLink)
+const nav = document.querySelector(".nav")
+const links = document.querySelectorAll(".nav-link")
+const buttons = document.querySelectorAll(".btn")
+console.log(links)
 
-const xContainer = document.querySelector(".nav")
+const xContainer = document.querySelector(".container")
 console.log(xContainer)
 
-firstLink.addEventListener ('keydown', (event) => {
-if (event.key === 'a') {
-    xContainer.style.backgroundColor = "pink"
+xContainer.addEventListener ('keydown', (event) => {
+if (event.key === 'Tab') {
+    xContainer.style.backgroundColor = "turquoise"
     }
 })
 
-firstLink.addEventListener('mouseover', function(event)  {
+links.forEach((ele) => {
+    ele.addEventListener('mouseover', (event) => {
     event.target.style.color = "white"
-})
+    })
+});
 
-firstLink.addEventListener('focus', function(event) {
+links.addEventListener((ele) => {
+    ele.addEventListener('focus', (event) => {
     event.target.style.color = "purple"
-})
+    })
+});
+
