@@ -1,27 +1,51 @@
 // Your code goes here
-const nav = document.querySelector(".nav")
-const links = document.querySelectorAll(".nav-link")
-const buttons = document.querySelectorAll(".btn")
-console.log(links)
 
-const xContainer = document.querySelector(".container")
-console.log(xContainer)
+const busImg = document.querySelector('.intro img')
+ const letsGo = document.querySelector('.text-content h2')
+ const parColor = document.querySelector('.intro p')
+const navAll = document.querySelector('nav a')
+const body = document.querySelector('body')
 
-xContainer.addEventListener ('keydown', (event) => {
-if (event.key === 'Tab') {
-    xContainer.style.backgroundColor = "turquoise"
+busImg.addEventListener('mouseover', function(event){
+    busImg.style.width = '50%';
+})
+
+busImg.addEventListener('mouseleave', function(event){
+    busImg.style.width = '100%';
+})
+
+parColor.addEventListener('mouseout', function(event){
+    parColor.style.color = 'blue';
+})
+
+document.addEventListener('keyup', (event) => {
+    body.style.backgroundColor = "pink"
+})
+
+ document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      navAll.style.color = "white";
     }
 })
 
-links.forEach((ele) => {
-    ele.addEventListener('mouseover', (event) => {
-    event.target.style.color = "white"
-    })
+let navBar = document.querySelector('nav')
+navBar.addEventListener("click", function( event){
+    event.preventDefault();
+ });
+
+ letsGo.addEventListener('dblclick',function(event){
+    letsGo.style.fontSize = '500%'
+ })
+
+window.addEventListener('scroll', function(event){
+    parColor.style.opacity 
+})
+
+window.addEventListener('load', function(event) {
+    alert('Hello World')
+    console.log('Hello World')
 });
 
-links.addEventListener((ele) => {
-    ele.addEventListener('focus', (event) => {
-    event.target.style.color = "purple"
-    })
-});
-
+window.addEventListener('resize', function(event) {
+    console.log('Resizing \'cause we blind')
+})
